@@ -5,12 +5,20 @@ function Contact() {
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 
-  
+  const isValidEmail = (email) => {
+    // using regex to validate email input.
+    const emailPattern = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+    return emailPattern.test(email);
+  }
+
+
 
 	const handleInputChange = e => {
 		const { target } = e;
 		const inputType = target.name;
 		const inputValue = target.value;
+
+
 
 		// Based on the input type, we set the state of either email, username, and password
 		if (inputType === 'name') {
@@ -27,6 +35,10 @@ function Contact() {
 		if(name === '' || email === '' || message === '') {
 			alert('Please fill in all fields');
 		}
+   if (!isValidEmail(email)){
+    alert('Please enter a valid email address');
+    valid=false;
+   }
 	}
 
 	return (
@@ -41,6 +53,7 @@ function Contact() {
 					onChange={handleInputChange}
 					// onChange={orThisWayForBoth}
 					type="text"
+          className="form-control mb-3 rounded"
 					placeholder="Name"
 				/>
 				<input
@@ -49,6 +62,7 @@ function Contact() {
 					onChange={handleInputChange}
 					// onChange={orThisWayForBoth}
 					type="text"
+          className="form-control mb-3 rounded"
 					placeholder="Email"
 				/>
 				<input
@@ -57,10 +71,11 @@ function Contact() {
 					onChange={handleInputChange}
 					// onChange={orThisWayForBoth}
 					type="text"
+          className="form-control mb-3 rounded"
 					placeholder="Type your message here"
 				/>
 
-				<button type="submit">
+				<button type="submit" className="btn btn-primary btn-lg">
 					Submit
 				</button>
 			</form>
