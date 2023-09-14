@@ -1,0 +1,19 @@
+.card img {
+    max-width: 100%; 
+    height: auto;  
+  }
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;  
+  }
+
+
+  .project-card {
+    max-width: 300px; 
+    margin: 10px;     
+  }
