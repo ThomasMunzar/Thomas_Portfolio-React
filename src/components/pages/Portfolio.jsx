@@ -50,17 +50,20 @@ export default function Portfolio() {
 
 
   return (
-    <div className="container project-container">
-      <div className="container">
-        <h1 className="d-flex justify-content-center">
+
+      <div className="project-container">
+        <h1 className="text-center">
           My Work
         </h1>
-        <div>
+        <div className="d-flex flex-wrap justify-content-center">
           {projects.map((project, index) => (
-            <Project key={index} {...project} />
+            <div className="col-md-6 col-lg-4 mb-4">
+              <Project key={index} {...project} className="project-card" />
+            </div>
           ))}
         </div>
       </div>
-    </div>
+
+
   );
 }
