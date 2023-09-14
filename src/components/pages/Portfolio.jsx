@@ -6,9 +6,14 @@ import Project from "../project";
 export default function Portfolio() {
   const projects = [
     {
+     title: 'forumZ',
+     description: 'The all encompassing Reddit-like platform where you can explore different forumZ, make a post with an embedded video or picture, comment on others posts and even reply to comments!',
+     deployedLink: 'https://forumz-090c0b5b4bff.herokuapp.com/',
+     githubLink: 'https://github.com/jacob-kachmarek/forumZ'
+   },
+    {
       title: 'Wack',
       description: 'A community driven project platform. Sign-up and create a project with a todo list. Get input from other users and comment on other users projects.',
-      // image: Image,
       deployedLink: 'https://blooming-beyond-30251-89ceb9e97d3f.herokuapp.com/',
       githubLink: 'https://github.com/ThomasMunzar/Wack',
     },
@@ -17,11 +22,6 @@ export default function Portfolio() {
       description: 'Enter your zipcode and find a gas station that offers alt. fuel!',
       deployedLink: 'https://iquiroz95.github.io/diesel-din-dance/',
       githubLink: 'https://github.com/iquiroz95/diesel-din-dance',
-    },
-     {
-      title: 'ORM E-Commerce Backend',
-      description: 'Show casing restful APIs for a fictional E-Commerce website.',
-      githubLink: 'https://github.com/ThomasMunzar/ORM-E-Commerce-BackEnd',
     },
      {
       title: 'Full-Stack ToDo List',

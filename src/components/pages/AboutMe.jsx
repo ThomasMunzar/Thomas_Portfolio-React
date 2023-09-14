@@ -1,8 +1,10 @@
 import React from "react";
+import Thomas from "/assets/images/Thomas.jpeg"
+import './About.css'
 
-// import Thomas from "../../../public/assets/images/Thomas.png"
 export default function About() {
-    return (
+
+  return (
       <div className="container">
         <div className="d-flex justify-content-center">
         <h1 >Thomas Munzar</h1>
@@ -10,7 +12,7 @@ export default function About() {
         <h5 className="d-flex justify-content-center">Web Developer</h5>
 
         <div>
-          <img src="/assets/images/Thomas.png" alt="Image of a Web Developer"></img>
+          <img src={Thomas} alt="Image of a Web Developer" className="about-image"></img>
         </div>
         <div className="text-center">
         <p className="">
